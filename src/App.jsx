@@ -4,6 +4,8 @@ import Nav from './layout/Nav.jsx';
 import { dark, light } from './style/theme.js';
 import { useTheme } from './hooks/useTheme';
 import Contents from './layout/Contents.jsx';
+import DigitalMainClock from './component/DigitalMainClock.jsx';
+import ThemeToggleButton from './component/themeToggleButton.jsx';
 
 const App = () => {
   const [themeMode, toggleTheme] = useTheme();
@@ -13,24 +15,26 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <MainStyle>
-        <Nav themeHandler={toggleTheme} />
-        <Contents />
+        <Nav />
+        <Contents>
+          <DigitalMainClock />
+          <ThemeToggleButton clickHandler={toggleTheme} />
+        </Contents>
       </MainStyle>
     </ThemeProvider>
   );
 };
 
 const GlobalStyle = createGlobalStyle`
-  *, body {
-    width: 100%;
-    height: 100%;
+  html, body {
     margin: 0;
-    padding: 0;
+    height: 100%;
+    overflow: hidden;
   }
 `;
 
 const MainStyle = styled.div`
-  width: 100%;
+  height: 100vh;
   background-color: ${(props) => props.theme.colors.bgColor};
 `;
 

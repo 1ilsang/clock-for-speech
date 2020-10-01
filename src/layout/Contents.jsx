@@ -1,16 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Contents = () => {
-  return (
-    <>
-      <ClockStyle>{Date.now()}</ClockStyle>
-    </>
-  );
+const Contents = ({ children }) => {
+  return <ContentsStyle>{children}</ContentsStyle>;
 };
 
 export default Contents;
 
-const ClockStyle = styled.div`
+const ContentsStyle = styled.div`
+  height: 80vh;
+  padding: 10vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   color: ${(props) => props.theme.colors.titleColor};
 `;

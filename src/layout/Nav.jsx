@@ -1,18 +1,17 @@
-import React, { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
-import ThemeToggleButton from '../component/themeToggleButton.jsx';
+import React from 'react';
+import styled from 'styled-components';
 
-const Nav = ({ themeHandler }) => {
-  const themeContext = useContext(ThemeContext);
-
+const Nav = () => {
   return (
     <>
-      <ThemeToggleButton
-        title={themeContext.type === 'light' ? 'Light' : 'Dark'}
-        clickHandler={themeHandler}
-      />
+      <RightContents />
     </>
   );
 };
+
+const RightContents = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
 
 export default Nav;

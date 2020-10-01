@@ -1,0 +1,1 @@
+export const parseSingleDigitToDoubleDigit = number => number < 10 ? `0${number}` : `${number}`;
