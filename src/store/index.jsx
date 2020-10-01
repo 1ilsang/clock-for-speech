@@ -23,9 +23,13 @@ export function StoreProvider({ children }) {
 }
 
 export function useStoreState() {
-  return useContext(StateContext);
+  const context = useContext(StateContext);
+  if (!context) throw new Error('Cannot find StoreProvider');
+  return context;
 }
 
 export function useStoreDispatch() {
-  return useContext(DispatchContext);
+  const context = useContext(DispatchContext);
+  if (!context) throw new Error('Cannot find StoreProvider');
+  return context;
 }

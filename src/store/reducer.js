@@ -14,9 +14,7 @@ const reducer = (state = {}, action) => {
         searchQuery: payload,
       };
     default:
-      return {
-        ...state,
-      };
+      throw new Error(`Unhandled action type: ${type}`);
   }
 };
 
