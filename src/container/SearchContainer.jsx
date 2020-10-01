@@ -1,10 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useStoreDispatch } from '~/store/index.jsx';
+import { SEARCH_IMAGE_FOR_BACKGROUND } from '~/model/actionType';
 
 const SearchContainer = () => {
+  const dispatch = useStoreDispatch();
+
   const handleInputKeyPress = (event) => {
     if (event.key !== 'Enter') return;
-    setSearchQuery(event.target.value);
+    dispatch({
+      type: SEARCH_IMAGE_FOR_BACKGROUND,
+      payload: event.target.value,
+    });
     event.target.value = '';
   };
 
