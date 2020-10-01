@@ -17,11 +17,11 @@ export default DigitalMainClock;
 
 const ClockStyle = styled.h1`
   &:hover {
-    color: #3c99dc;
+    text-shadow: 0px 1px #ffffff, 4px 4px 0px #dad7d7;
     cursor: pointer;
   }
 
   color: ${({ theme, isStop }) => {
-    return isStop ? '#0F5298' : theme.colors.titleColor;
+    return isStop ? 'magenta' : theme.colors.titleColor;
   }};
 `;
