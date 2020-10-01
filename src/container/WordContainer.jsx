@@ -15,6 +15,7 @@ const WordContainer = () => {
 export default WordContainer;
 
 const WordContainerStyle = styled.div`
+  height: 20vh;
   width: 100%;
   display: flex;
   align-items: center;
