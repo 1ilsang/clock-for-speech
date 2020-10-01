@@ -1,4 +1,4 @@
-export const light = {
+export const lightTheme = {
   type: 'light',
   colors: {
     titleColor: '#121212',
@@ -6,7 +6,7 @@ export const light = {
   }
 }
 
-export const dark = {
+export const darkTheme = {
   type: 'dark',
   colors: {
     titleColor: '#ffffff',

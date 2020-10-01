@@ -1,13 +1,6 @@
-import {
-  useState,
-  useEffect
-} from 'react';
-import {
-  dayModel
-} from '../model/date';
-import {
-  parseSingleDigitToDoubleDigit
-} from '../parser/number';
+import { useState, useEffect } from 'react';
+import { dayModel } from '../model/date';
+import { parseSingleDigitToDoubleDigit } from '../parser/number';
 
 export const useDate = () => {
   const [time, setTime] = useState(getTime(new Date()));
@@ -36,5 +29,5 @@ const getTime = (cur) => {
     hour: parseSingleDigitToDoubleDigit(cur.getHours()),
     minute: parseSingleDigitToDoubleDigit(cur.getMinutes()),
     second: parseSingleDigitToDoubleDigit(cur.getSeconds()),
-  }
-}
+  };
+};
