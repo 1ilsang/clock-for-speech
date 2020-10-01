@@ -11,7 +11,6 @@ const ContentsStyle = styled.div`
   height: 80vh;
   padding: 10vh;
   display: flex;
-  text-align: center;
   justify-content: center;
   align-items: center;
   color: ${(props) => props.theme.colors.titleColor};

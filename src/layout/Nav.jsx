@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Nav = () => {
+const Nav = ({}) => {
   return (
     <>
-      <RightContents />
+      <RightContents></RightContents>
     </>
   );
 };

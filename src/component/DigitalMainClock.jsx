@@ -5,21 +5,15 @@ const DigitalMainClock = () => {
   const [time, toggleTime, isStop] = useDate();
 
   return (
-    <MainStyle>
-      <ClockStyle isStop={isStop} onClick={toggleTime}>
-        {time.year}-{time.month}-{time.date} {time.day}
-        <br />
-        {time.hour}:{time.minute}:{time.second}
-      </ClockStyle>
-    </MainStyle>
+    <ClockStyle isStop={isStop} onClick={toggleTime}>
+      {time.year}-{time.month}-{time.date} {time.day}
+      <br />
+      {time.hour}:{time.minute}:{time.second}
+    </ClockStyle>
   );
 };
 
 export default DigitalMainClock;
-
-const MainStyle = styled.div`
-  width: 50vh;
-`;
 
 const ClockStyle = styled.h1`
   &:hover {
