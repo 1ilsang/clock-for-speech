@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 import ThemeToggleButton from '../component/themeToggleButton.jsx';
 
-const Nav = ({ theme, themeHandler }) => {
+const Nav = ({ themeHandler }) => {
+  const themeContext = useContext(ThemeContext);
+
   return (
     <>
       <ThemeToggleButton
-        title={
-          theme === 'light'
-            ? '일반모드로 테마 변경하기'
-            : '다크모드로 테마 변경하기'
-        }
+        title={themeContext.type === 'light' ? 'Light' : 'Dark'}
         clickHandler={themeHandler}
       />
     </>

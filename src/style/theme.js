@@ -1,13 +1,15 @@
 export const light = {
+  type: 'light',
   colors: {
     titleColor: '#121212',
-    bgColor: '#b8b8b8'
+    bgColor: 'white'
   }
 }
 
 export const dark = {
+  type: 'dark',
   colors: {
-    titleColor: '#b8b8b8',
+    titleColor: 'white',
     bgColor: '#121212'
   }
 }

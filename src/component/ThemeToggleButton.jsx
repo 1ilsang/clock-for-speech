@@ -12,17 +12,11 @@ const ThemeToggleButton = ({ title, clickHandler }) => {
 export default ThemeToggleButton;
 
 const ToggleButtonStyle = styled.button`
-  margin: 5rem;
-  width: 20rem;
-  height: 20rem;
   border: none;
+  width: 100px;
+  height: 30px;
   background-color: #6e827f;
   color: ${(props) => props.theme.colors.titleColor};
   border-radius: 8px;
   cursor: pointer;
-
-  span {
-    font-size: 1.6rem;
-    font-weight: bold;
-  }
 `;
