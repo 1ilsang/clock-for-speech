@@ -30,11 +30,11 @@ export const useDate = () => {
 const getTime = (cur) => {
   return {
     year: cur.getFullYear(),
-    month: cur.getMonth() + 1,
+    month: parseSingleDigitToDoubleDigit(cur.getMonth() + 1),
     date: parseSingleDigitToDoubleDigit(cur.getDate()),
     day: dayModel[cur.getDay()],
-    hour: cur.getHours(),
-    minute: cur.getMinutes(),
+    hour: parseSingleDigitToDoubleDigit(cur.getHours()),
+    minute: parseSingleDigitToDoubleDigit(cur.getMinutes()),
     second: parseSingleDigitToDoubleDigit(cur.getSeconds()),
   }
 }
