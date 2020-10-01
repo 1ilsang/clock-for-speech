@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { useDate } from '../hooks/useDate';
 const DigitalMainClock = () => {
-  const [time, stopTime] = useDate();
+  const [time, toggleTime, isStop] = useDate();
 
   return (
     <MainStyle>
-      <ClockStyle onClick={stopTime}>
+      <ClockStyle isStop={isStop} onClick={toggleTime}>
         {time.year}-{time.month}-{time.date} {time.day}
         <br />
         {time.hour}:{time.minute}:{time.second}
@@ -27,5 +27,7 @@ const ClockStyle = styled.h1`
     cursor: pointer;
   }
 
-  color: ${(props) => props.theme.colors.titleColor};
+  color: ${({ theme, isStop }) => {
+    return isStop ? '#0F5298' : theme.colors.titleColor;
+  }};
 `;

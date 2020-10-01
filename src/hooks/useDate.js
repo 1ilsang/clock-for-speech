@@ -24,7 +24,7 @@ export const useDate = () => {
     return () => clearInterval(interval);
   }, [isStopTime]);
 
-  return [time, toggleTime];
+  return [time, toggleTime, isStopTime];
 };
 
 const getTime = (cur) => {
