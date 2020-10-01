@@ -1,10 +1,10 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import Nav from './layout/Nav.jsx';
-import { GlobalStyle } from './style/global';
-import Contents from './layout/Contents.jsx';
-import WordContainer from './container/WordContainer.jsx';
-import { useStoreState } from './store/index.jsx';
+import Nav from '~/layout/Nav.jsx';
+import { GlobalStyle } from '~/style/global';
+import Contents from '~/layout/Contents.jsx';
+import WordContainer from '~/container/WordContainer.jsx';
+import { useStoreState } from '~/store/index.jsx';
 
 const App = () => {
   const state = useStoreState();

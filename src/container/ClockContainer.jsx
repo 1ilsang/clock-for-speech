@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import DigitalMainClock from '../component/DigitalMainClock.jsx';
-import ThemeToggleButton from '../component/themeToggleButton.jsx';
+import ThemeToggleButton from '../component/ThemeToggleButton.jsx';
 import { useTheme } from '~/hooks/useTheme.js';
 import { useStoreDispatch } from '~/store/index.jsx';
 import { TOGGLE_THEME } from '~/model/actionType';
